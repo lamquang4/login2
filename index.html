@@ -67,14 +67,18 @@ padding: 30px 30px 88px;
  
     }
     .f-box h1{
-    font-size: 41px;
-    margin-bottom: 60px;
+    font-size: 50px;
+    margin-bottom: 50px;
+    margin-top: 25px;
     font-weight: 800;
     display: flex;
     justify-content: center;
     color:#63a8ff;
+
     }
-  
+h1{
+    font-family: Fasthand;
+  }
  
     .input-field{
 background:rgb(255, 255, 255);
@@ -133,6 +137,20 @@ margin-bottom: 21px;
     background:#eaeaea;
     color:#555;
 }
+ button{
+        transition: all 0.2s ease;
+    }
+    button:active{
+        transform: scale(0.96);
+    }
+    @font-face{
+font-family: Fasthand;
+src: url('./pic/Fasthand-Regular.ttf');
+}
+@font-face{
+font-family: Bacas;
+src: url('./pic/BacasimeAntique-Regular.ttf');
+}
 </style>
 <script>
     let subtn=document.getElementById("subtn");
@@ -154,4 +172,5 @@ margin-bottom: 21px;
         subtn.classList.remove("disable");
         sibtn.classList.add("disable");
     }
+   
 </script>
