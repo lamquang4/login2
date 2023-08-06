@@ -5,175 +5,424 @@
 <head>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Đăng nhập và đăng kí</title>
+  <title>Trang chính</title>
 </head>
 <body>
-<div class="container">
-<div class="f-box">
-     <h1 id="tittle">Sign Up</h1>
-     <form>
-        <div class="input-group">
-      <div class="input-field">
-        <i class="fa-solid fa-user"></i>
-        <input  type="text" placeholder="Username">
-      </div>
-
-      <div class="input-field">
-        <i class="fa-solid fa-lock"></i>
-        <input type="password" placeholder="Password">
-      </div>
-
-      <div class="input-field">
-        <i class="fa-solid fa-lock" id="ic"></i>
-        <input id="hidep" type="password" placeholder="Confirm Password" >
-      </div>
-      <div id="fpass">
-<a href="#">Forgot password?</a></div>
-        </div>
-        <div class="b-field">
-            <button type="button" id="subtn">Sign up</button>
-            <button type="button" id="sibtn" class="disable">Sign in</button>
-        </div>
-     </form>
-</div>
-</div>
-
-
-</body>
-</html>
-
-
-<style>
-    body{
-        background: url('./pic/blue1.png');
-      
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-    .container{
-    width: 100%;
-    height:100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-    .f-box{
-        width:90%;
-        max-width:405px;
-    background: rgba(255,255,255,0.7);
-text-align: center;
-padding: 30px 30px 88px;
+ <section id="header">
+<img src="./pic/logo.png" class="logo" alt="" >
  
-    }
-    .f-box h1{
-    font-size: 50px;
-    margin-bottom: 50px;
-    margin-top: 25px;
-    font-weight: 800;
-    display: flex;
-    justify-content: center;
-    color:#63a8ff;
+<div>
+ <ul id="icons">
 
-    }
-h1{
-    font-family: Fasthand;
-  }
- 
-    .input-field{
-background:rgb(255, 255, 255);
-margin: 15px 0;
-border-radius:10px;
+    <div class="group">
+    <input type="text" placeholder="Search" name="text" class="input">
+  <svg fill="#000000" width="20px" height="20px" viewBox="0 0 1920 1920" xmlns="http://www.w3.org/2000/svg">
+    <path d="M790.588 1468.235c-373.722 0-677.647-303.924-677.647-677.647 0-373.722 303.925-677.647 677.647-677.647 373.723 0 677.647 303.925 677.647 677.647 0 373.723-303.924 677.647-677.647 677.647Zm596.781-160.715c120.396-138.692 193.807-319.285 193.807-516.932C1581.176 354.748 1226.428 0 790.588 0S0 354.748 0 790.588s354.748 790.588 790.588 790.588c197.647 0 378.24-73.411 516.932-193.807l516.028 516.142 79.963-79.963-516.142-516.028Z" fill-rule="evenodd"></path>
+</svg>
+</div>
+    <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+    </li>
+    <li><a href=""><i  class="fa-regular fa-heart"></i></a>
+    </li>
+    <li><a href="login.html"><i  class="fa-regular fa-user" id="account"></i></a>
+    </li>
+ </ul>
+</div>
+ </section>
+ <section id="hero">
+    <ul id="navbar">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="">New & Featured</a></li>
+        <li><a href="">Sale</a></li>
+        <li><a href="">About</a></li>
+
+     
+ </ul>
+<div id="inside">
+  <h4>Super value deals</h4>
+  <h2>On all products</h2>
+
+<p>Save more with coupons & up to 70% off!</p>
+<button class="shopbtn">Shop Now
+  <svg viewBox="-2.4 -2.4 28.80 28.80" fill="none" xmlns="http://www.w3.org/2000/svg" transform="rotate(0)matrix(1, 0, 0, 1, 0, 0)" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="0.288"></g><g id="SVGRepo_iconCarrier"> <path d="M6.29977 5H21L19 12H7.37671M20 16H8L6 3H3M9 20C9 20.5523 8.55228 21 8 21C7.44772 21 7 20.5523 7 20C7 19.4477 7.44772 19 8 19C8.55228 19 9 19.4477 9 20ZM20 20C20 20.5523 19.5523 21 19 21C18.4477 21 18 20.5523 18 20C18 19.4477 18.4477 19 19 19C19.5523 19 20 19.4477 20 20Z" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+</button>
+</div>
+ </section>
+<section id="product1" class="section-p1">
+  <h2>Featured Products</h2>
+<div class="pro-container">
+  <div class="pro">
+<img src="./pic/giaybac.png" alt="">
+<div class="des">
+  <h5>Giày bạc</h5>
+  <div class="star">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+  </div>
+  <h4>$300</h4>
+</div>
+<div id="cart">
+<a href=""><i  class="fa-solid fa-cart-shopping"></i></a>
+  </div>
+</div> 
+<div class="pro">
+  <img src="./pic/giaydong.png" alt="">
+  <div class="des">
+    <h5>Giày động cơ</h5>
+    <div class="star">
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+  <i class="fas fa-star"></i>
+    </div>
+    <h4>$320</h4>
+  </div>
+  <div id="cart">
+  <a href=""><i  class="fa-solid fa-cart-shopping"></i></a>
+    </div>
+  </div> 
+  <div class="pro">
+    <img src="./pic/giayhoi.png" alt="">
+    <div class="des">
+      <h5>Giày Ionia</h5>
+      <div class="star">
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+    <i class="fas fa-star"></i>
+      </div>
+      <h4>$300</h4>
+    </div>
+    <div id="cart">
+    <a href=""><i  class="fa-solid fa-cart-shopping"></i></a>
+      </div>
+    </div> 
+    <div class="pro">
+      <img src="./pic/giaykhang.png" alt="">
+      <div class="des">
+        <h5>Giày thủy ngân</h5>
+        <div class="star">
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+        </div>
+        <h4>$300</h4>
+      </div>
+      <div id="cart">
+      <a href=""><i  class="fa-solid fa-cart-shopping"></i></a>
+        </div>
+      </div> 
+      <div class="pro">
+        <img src="./pic/giayno.jpg" alt="">
+        <div class="des">
+          <h5>Giày cuồng nộ</h5>
+          <div class="star">
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+        <i class="fas fa-star"></i>
+          </div>
+          <h4>$300</h4>
+        </div>
+        <div id="cart">
+        <a href=""><i  class="fa-solid fa-cart-shopping"></i></a>
+          </div>
+        </div> 
+        <div class="pro">
+          <img src="./pic/giaythep.png" alt="">
+          <div class="des">
+            <h5>Giày thép gai</h5>
+            <div class="star">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+            </div>
+            <h4>$300</h4>
+          </div>
+          <div id="cart">
+          <a href=""><i  class="fa-solid fa-cart-shopping"></i></a>
+            </div>
+          </div> 
+</div>
+</section>
+
+ </body>
+ </html>
+ <style>
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Spartan', sans-serif;
+   }
+
+  #header{
+height:80px;
 display: flex;
+justify-content: space-between;
 align-items: center;
-margin-bottom: 21px;
-
-    }
-    input{
-        width: 100%;
-        background: transparent;
-        border: 0;
-        outline:0;
-        padding: 18px 15px;
-      
-    }
-    .input-field i{
-        margin-left:11px;
-      color: #999;
-    
-    }
-    form a{
-        text-decoration: none;
-        font-size:17.5px;
-        color: black;
-        display: flex;
-     justify-content: left;
-    }
-    #fpass{
-        font-weight: 610;
-    }
-.b-field{
-    width: 100%;
+padding: 20px 80px;
+background-color: white;
+padding-bottom: 35px;
+box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+  }
+  #icons{
+        margin-top: 8px;
     display: flex;
-    justify-content: space-between;
-}
-.b-field button{
+    align-items: center;
+    justify-content: center;
+  }
+  #icons li{
+    list-style: none;
+    padding: 0 20px;
+  }
+  #icons i{
 
-    flex-basis: 48%;
-    background: white;
-    color: black;
-    height: 40px;
-    border-radius: 20px;
-    border:0;
-    outline:0;
-    font-size: 18px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: blue1 1s;
+font-size: 21px;
+color: black;
+  }
+  #header img{
+  margin-top: 4px;
+    height: 55px;
+    width: 68px;
+  }
+
+
+
+  #navbar {
+    padding-top: 22px;
+    margin-left: 58px;
+   display: flex;
+
+justify-content: center;
+  
+
+  }
+  #navbar li{
+ position: relative;
+    list-style: none;
+    padding: 0 20px;
+
+  }
+  #navbar li a{
+ 
+    text-decoration: none;
+        font-size: 27px;
+        font-weight: 600;
+        color:black;
+  }
+
+.group {
+margin-right: 20px;
+display: flex;
+
+  background-color: white;
+  position: relative;
 }
-.input-group{
-    height: 260px;
-}.b-field button.disable{
-    background:#eaeaea;
-    color:#3c3737;
+
+.input {
+
+  width: 150px;
+  padding: 6px 0px 6px 40px;
+  border-radius: 9999px;
+  border: solid 1px #333;
+  transition: all .2s ease-in-out;
+  outline: none;
+  opacity: 0.8;
+
 }
- button{
-        transition: all 0.2s ease;
-        border: 3px solid black;
-  border-radius: 0.4em;
-  box-shadow: 0.32em 0.32em;
-    }
-    button:active{
-        transform: scale(0.96);
-    }
-    @font-face{
-font-family: Fasthand;
-src: url('./pic/Fasthand-Regular.ttf');
+
+.group svg {
+
+  
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  transform: translate(0, -50%);
 }
-@font-face{
-font-family: Bacas;
-src: url('./pic/BacasimeAntique-Regular.ttf');
+
+.input:focus {
+  opacity: 1;
+  width: 210px;
 }
-</style>
-<script>
-    let subtn=document.getElementById("subtn");
-    let sibtn=document.getElementById("sibtn");
-    let hidep=document.getElementById("hidep");
-   let ic=document.getElementById("ic");
-    let tittle=document.getElementById("tittle");
-    sibtn.onclick = function(){
-        hidep.style.display="none";
-        ic.style.display="none";
-        tittle.innerHTML="Sign In";
-        subtn.classList.add("disable");
-        sibtn.classList.remove("disable");
-    }
-    subtn.onclick= function(){
-        hidep.style.display="block";
-        ic.style.display="block";
-        tittle.innerHTML="Sign Up";
-        subtn.classList.remove("disable");
-        sibtn.classList.add("disable");
-    }
+#navbar li a:hover,
+#navbar li a.active{
+  color:red;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background: red;
+  position: absolute;
+  bottom: -4px;
+  left:20px;
+}
+.shopbtn {
+  position: relative;
+  display: flex;
+  align-items: center;
+margin-top: 27px;
+margin-left: 103px;
+  width: 125px;
+  height: 50px;
+  border: none;
+  padding: 0px 20px;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+ border-radius: 6.5px;
+  transition-duration: .3s;
+}
+
+.shopbtn svg {height: 32px;  width: 32px;
+  position: relative;
+  right: 0;
+  margin-right: 7px;
+
+  transition-duration: .3s;
+}
+
+.shopbtn:hover {
+  color: transparent;
+}
+
+.shopbtn:hover svg {
+  right: 33%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  transition-duration: .3s;
+}
+
+.shopbtn:active {
+  transform: translate(5px , 5px);
+  transition-duration: .3s;
+ 
+}
+
+
+#hero{
+background-image: url('./pic/hero4.png');
+height: 90vh;
+width:100%;
+background-size: cover;
+background-repeat: no-repeat;
+        background-attachment: fixed;
+
+    
+      }
+   #inside{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 150px 80px 0 280px;
+   }
+#inside h4,h2{
+ 
+  font-size: 45px;
+
+}
+#inside p{
+  font-size: 20px;
+}
+#inside p,h2,h4{
+ margin-bottom: 8px;
+}
+#product1{
+  text-align: center;
+}
+#product1 h2{
+  margin-top: 15px;
+}
+#product1 .pro{
+  width: 95px;
+  height: 300px;
+  min-width: 250px;
+  padding: 10px 12px;
+  background-color:#F4F6F7;
+  border: 1.2px solid #c4d3c6;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
+margin: 15px 0;
+transition: 0.2s ease;
+margin-left: 8.5px;
+position: relative;
+}
+#product1 .pro img{
+  margin-top: 10px;
+width: 120px;
+  border-radius: 20px;
+}
+#product1 .pro:hover{
+  box-shadow: 20px 20px 30px rgba(0,0,0,0.06);
+}
+#product1 .pro .des{
+  text-align: start;
+  padding: 10px 0;
+
+
+}
+#product1 .pro .des h5{
+  font-size: 22px;
+  padding-top: 7px;
+padding-bottom: 5px;
+}
+#product1 .pro .des i{
+  font-size: 15px;
+  color: rgb(243,181,25);
+  padding-bottom: 5px;
+}
+#product1 .pro .des h4{
+  padding-top: 7px;
+  font-size: 18px;
+  font-weight: 700;
+  color:green;
+
+}
+#product1 .pro #cart a{
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color:#088178;
+  border:1px solid #cce7d0;
+  position: absolute;
+  bottom: 20px;
+  right:10px;
+}
+#product1 .pro-container{
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+    body{
    
-</script>
+     
+     width:100%;
+    }
+ </style>
+
+ <script>
+
+
+ </script>
