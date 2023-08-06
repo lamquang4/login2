@@ -22,7 +22,7 @@
 </div>
     <li><a href=""><i class="fa-solid fa-cart-shopping"></i></a>
     </li>
-    <li><a href=""><i  class="fa-regular fa-heart"></i></a>
+    <li><a href=""><i id="heart"  class="fa-regular fa-heart"></i></a>
     </li>
     <li><a href="login.html"><i  class="fa-regular fa-user" id="account"></i></a>
     </li>
@@ -451,7 +451,18 @@
       <a href=""><i class="fa-brands fa-youtube"></i></a>
       <a href=""> <i class="fa-brands fa-tiktok"></i></a>
     </div>
+
   </div>
+</div>
+<div class="col">
+  <h4>Get help</h4>
+  <p>Order Status</p>
+  <p>Delivery</p>
+  <p>Payment Options</p>
+  <p>Contact Us</p>
+</div>
+<div class="copyright">
+<p>© 2023 - Vietnam Company</p>
 </div>
 </footer>
 
@@ -469,6 +480,7 @@ padding: 0;
 box-sizing: border-box;
 font-family: 'Spartan', sans-serif;
    }
+
 
   #header{
 height:80px;
@@ -813,6 +825,10 @@ button.learn1{
   outline: none;
   transition: 0.2s;
 }
+button.learn1:hover{
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+}
 button.learn2{
   font-size: 14px;
   font-weight: 600;
@@ -825,10 +841,17 @@ button.learn2{
   outline: none;
   transition: 0.2s;
 }
+button.learn2:hover{
+  background-color: #23c483;
+  box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+}
 footer{
-  background-color: black;
+  background-color: #111;
   width: 100%;
   height: 290px;
+  display: flex;
+
+
 }
 .section-f1{
   color:#fff;
@@ -859,11 +882,29 @@ footer{
   text-decoration: none;
 }
 
+.section-f1 .col p{
+ color:#7e7e7e;
+ margin-bottom: 9.6px;
+}
+.section-f1 .col p:hover{
+ color:#fff;
+
+}
+.section-f1 .col span{
+margin-right: 20px;
+}
+footer .copyright{
+margin-top: 192px;
+margin-left: 152px;
+ text-align: center;
+}
+
     body{
    
      
      width:100%;
     }
+
  </style>
 
  <script>
