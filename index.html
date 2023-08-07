@@ -914,7 +914,7 @@ margin-left: 152px;
         top:0;
         right:-300px;
         height:100vh;
-        width: 300px;
+     
         background-color: #E3E6F3;
         box-shadow: 0 40px 60px rgba(0,0,0,0.1);
 padding:80px 0 0 10px;
@@ -986,6 +986,106 @@ transition: 0.3s ease;
 
     }
   }
+
+@media(max-width:990px){
+ #header{
+  width: 915px;
+ }
+ #hero{
+  width: 915px;
+ }
+ #banner{
+  width: 915px;
+ }
+ #product1{
+  width: 915px;
+ }
+ footer{
+  width:915px
+ }
+ 
+  #icons{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top:0;
+    right:-300px;
+    height:100vh;
+
+    background-color: #E3E6F3;
+    box-shadow: 0 40px 60px rgba(0,0,0,0.1);
+padding:80px 0 0 10px;
+transition: 0.3s ease;
+  }
+  #icons li{
+
+   margin-bottom: 25px; 
+  }
+  #icons .group{
+    margin-bottom: 25px; 
+    background-color: #E3E6F3;
+  }
+  #icons.active{
+  right:0px;
+ } 
+  #mobile{
+display: flex;
+align-items: center;
+}
+#mobile i{
+color:black;
+font-size: 24px;
+padding-left: 20px;
+
+}
+#close{
+position: absolute;
+top:6px;
+left: 200px;
+color:#222;
+font-size:50px;
+display: initial;
+}
+#search{
+position: absolute;
+top:30px;
+left:15px;
+
+}
+#lg-bag{
+display: none;
+}
+#lg-heart{
+display: none;
+}
+#lg-user{
+  display: none;
+}
+#hero{
+  height: 70vh;
+  padding:0 80px;
+  background-position: top 30% right 30%;
+}
+#product1 .pro-container{
+  justify-content: center;
+
+
+}
+#product1 .pro{
+  margin: 17px;
+}
+#banner{
+  height: 20vh;
+}
+#sm-banner .banner-box{
+  min-width:100%;
+  height:30vh;
+
+}
+}
 
 
  </style>
