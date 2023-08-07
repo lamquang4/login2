@@ -445,10 +445,10 @@
 
 <footer class="section-f1">
 <div class="col">
-  <a href=""> <h4>FIND A STORE</h4></a>
-  <a href=""> <h3>BECOME A MEMBER</h3></a>
-  <a href=""><h6>Send Us Feedback</h6></a>
-  <div class="follow">
+  <a href=""> <h3>FIND A STORE</h3></a>
+  <a href=""> <h2>BECOME A MEMBER</h2></a>
+  <a href=""><h1>SEND US FEEDBACK</h1></a>
+  
 
     <div class="social">
       <a href=""><i class="fa-brands fa-facebook"></i></a>
@@ -457,7 +457,7 @@
       <a href=""> <i class="fa-brands fa-tiktok"></i></a>
     </div>
 
-  </div>
+ 
 </div>
 <div class="col">
   <h4>Get help</h4>
@@ -466,6 +466,14 @@
   <p>Payment Options</p>
   <p>Contact Us</p>
 </div>
+<div class="col">
+  <h4>About</h4>
+  <p>News</p>
+  <p>Careers</p>
+  <p>Investors</p>
+  <p>Sustainability</p>
+</div>
+
 <div class="copyright">
 <p>© 2023 - Vietnam Company</p>
 </div>
@@ -526,6 +534,11 @@ color: black;
   #mobile{
     display: none;
     align-items: center;
+   
+  }
+  .active{
+    width:400px;
+   
   }
   #close{
     display: none;
@@ -845,58 +858,67 @@ button.learn2:hover{
   box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
 }
 footer{
-  background-color: #111;
-  width: 100%;
-  height: 290px;
+background: #222;
   display: flex;
+flex-wrap: wrap;
 
+height: 220px;
 
 }
-.section-f1{
-  color:#fff;
+footer .col{
   display: flex;
-  align-items: center;
-
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 25px;
+  margin-right: 150px;
 }
-.col{
-  margin-left: 80px;
-  margin-bottom: 50px;
-  margin-top: 15px;
-}
-.section-f1 .col h4,h3,h6{
-  font-size: 22px;
-  margin-bottom: 10px;
-
-}
-.section-f1 .col i{
+footer h2,h1{
+  font-size: 18px;
   color:white;
-  font-size: 25px;
-  margin-left: 15px;
-  margin-top: 10px;
-
-
-}
-.section-f1 .col a{
+  margin-bottom: 5px;
+  padding-left: 30px;}
+footer h3{
   color:white;
-  text-decoration: none;
+  font-size: 18px;
+  padding-top: 26px;
+margin-bottom: 5px;
+  padding-left: 30px;
+}
+footer h4{
+  color:white;
+  font-size: 18px;
+  margin-top: 25px;
+  margin-bottom: 5px;
+
 }
 
-.section-f1 .col p{
- color:#7e7e7e;
- margin-bottom: 9.6px;
+footer p{
+  font-size: 13px;
+  margin: 5px 0 8px 0;
+  color:#7e7e7e;
 }
-.section-f1 .col p:hover{
+footer p:hover{
  color:#fff;
-
 }
-.section-f1 .col span{
-margin-right: 20px;
+footer a{
+  font-size: 13px;
+  text-decoration: none;
+  color: #222;
+  margin-bottom: 10px;
+}
+footer .social i{
+  color: white;
+  padding-right: 4px;
+  cursor: pointer;  
+  padding-left: 25px;
+  font-size: 20px;
 }
 footer .copyright{
-margin-top: 192px;
-margin-left: 152px;
- text-align: center;
+width: 100%;
+  text-align: center;
 }
+
+
 
     body{
    
@@ -943,7 +965,7 @@ transition: 0.3s ease;
   }
   #close{
     position: absolute;
-    top:28px;
+    top:15px;
     left:250px;
     color:#222;
     font-size:27px;
@@ -1003,16 +1025,23 @@ transition: 0.3s ease;
  footer{
   width:915px
  }
+ #icons li a{
+  font-size: 32px;
+ }
+ #header  i{
+  font-size: 40px;
+ }
+
  
   #icons{
-    
+
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
     position: fixed;
     top:0;
-    right:-300px;
+    right:-400px;
     height:100vh;
 
     background-color: #E3E6F3;
@@ -1028,30 +1057,46 @@ transition: 0.3s ease;
     margin-bottom: 25px; 
     background-color: #E3E6F3;
   }
+  .input{
+    height:45px;
+    width:200px;
+  }
+  .input:focus {
+  opacity: 1;
+  width: 260px;
+
+}
+#header img{
+  height: 65px;
+  width: 85px;
+}
   #icons.active{
   right:0px;
  } 
   #mobile{
+  
 display: flex;
 align-items: center;
 }
 #mobile i{
 color:black;
-font-size: 24px;
+font-size: 38px;
 padding-left: 20px;
 
 }
 #close{
 position: absolute;
-top:6px;
-left: 200px;
+top:15px;
+left: 333px;
 color:#222;
 font-size:50px;
+font-weight: 600;
 display: initial;
+
 }
 #search{
 position: absolute;
-top:30px;
+top:20px;
 left:15px;
 
 }
@@ -1076,15 +1121,18 @@ display: none;
 }
 #product1 .pro{
   margin: 17px;
-}
-#banner{
-  height: 20vh;
+  
 }
 #sm-banner .banner-box{
-  min-width:100%;
-  height:30vh;
+  height: 30vh;
 
+margin-left: 220px;
 }
+footer .copyright{
+  text-align: start;
+margin-left: 25px;
+}
+
 }
 
 
