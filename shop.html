@@ -9,7 +9,9 @@
 </head>
 <body>
  <section id="header">
+  <a href="index.html">
 <img src="./pic/logo.png" class="logo" alt="" >
+</a>
 <div>
  <ul id="icons">
 <li><a href="index.html" >Home</a></li>
@@ -37,7 +39,7 @@
  <a href=""><i id="heart"  class="fa-regular fa-heart"></i></a>
 <a href="login.html"><i  class="fa-regular fa-user" id="account"></i></a>
 
-  <i id="bar" class="fas fa-outdent"></i>
+<i id="bar" class="fa-solid fa-bars" style="color: #000000;"></i>
 
 </div>
  </section>
@@ -474,6 +476,7 @@ background-color: white;
 padding-bottom: 35px;
 box-shadow: 0 5px 15px rgba(0,0,0,0.06);
   }
+
   #icons{
      
     display: flex;
@@ -496,7 +499,7 @@ font-size: 21px;
 color: black;
   }
   #header img{
-  margin-top: 4px;
+    margin-top: 4px;
     height: 55px;
     width: 68px;
 
@@ -802,25 +805,32 @@ transition: 0.3s ease;
 
 #header img{
 
-  height: 42px;
-  width: 55px;
+  position: absolute;
+right:330px;
+  height: 40px;
+  width: 52px;
+  top:12px
 
 }
 
   #icons.active{
   right:0;
  } 
-  #mobile{
-
-display: flex;
-align-items: center;
-}
-#mobile i{
-color:black;
-font-size: 20px;
-padding-left: 20px;
-
-}
+ #mobile{
+  
+  display: flex;
+  align-items: center;
+  }
+  #bar{
+    position: absolute;
+    right:32px;
+  }
+  #mobile i{
+  color:black;
+  font-size: 20px;
+  padding-left: 18px;
+  
+  }
 #close{
 position: absolute;
 top:28px;
@@ -924,7 +934,8 @@ footer .col{
 }
 
 @media(max-width:768px){
-      #icons{
+  
+  #icons{
     
         display: flex;
         flex-direction: column;
@@ -941,8 +952,11 @@ padding:80px 0 0 10px;
 transition: 0.3s ease;
       }
       #icons li{
-   
-       margin-bottom: 25px; 
+        
+        margin-top: 20px;
+       margin-bottom: 10px; 
+      
+     
       }
   
       #icons .group{
@@ -954,6 +968,7 @@ transition: 0.3s ease;
       right:0px;
      } 
       #mobile{
+   
     display: flex;
     align-items: center;
   }
