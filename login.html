@@ -14,7 +14,7 @@
 </a>
 <div>
  <ul id="icons">
-<li><a href="index.html" >Home</a></li>
+<li><a href="index.html">Home</a></li>
         <li><a href="shop.html">New & Featured</a></li>
         <li><a href="">Sale</a></li>
         <li><a href="">About</a></li>
@@ -65,7 +65,7 @@
           <input id="hidep" type="password" placeholder="Confirm Password" id="cpass">
         </div>
         <div id="fpass">
-  <a href="#">Forgotten your password?</a></div>
+  <a href="#" id="forget">Already have an account?</a></div>
           </div>
           <div class="b-field">
               <button type="button" onclick="" id="subtn">Sign up</button>
@@ -130,7 +130,7 @@
     sibtn.onclick = function(){
         hidep.style.display="none";
         giau.style.borderBlockColor="white";
-      
+        document.getElementById("forget").textContent = "Forgotten your password?";
         ic.style.display="none";
         tittle.innerHTML="Sign In";
         hidep.style.borderColor="#0000FF";
@@ -140,6 +140,7 @@
     subtn.onclick= function(){
         hidep.style.display="block";
         ic.style.display="block";
+        document.getElementById("forget").textContent = "Already have an account?";
         giau.style.borderBlockColor="#e5e5e5";
         tittle.innerHTML="Sign Up";
         subtn.classList.remove("disable");
