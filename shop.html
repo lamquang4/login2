@@ -399,6 +399,7 @@
  <style>
 
 * {
+
 margin: 0;
 padding: 0;
 box-sizing: border-box;
@@ -768,7 +769,7 @@ right:290px;
   background-color:#F4F6F7;
   border: 1.2px solid #c4d3c6;
   border-radius: 25px;
-  cursor: pointer;
+
   box-shadow: 20px 20px 30px rgba(0,0,0,0.02);
 margin: 15px 0;
 transition: 0.2s ease;
@@ -806,7 +807,18 @@ padding-bottom: 5px;
   padding:15px 0 0 0;
   font-size: 20px;
 }
-
+#product1 .pro .des h4{
+  font-size: 17px;
+}
+#product1 .pro{     
+  margin: 17x;
+  width: 40px;
+    height: 250px;
+  
+}
+#product1 .pro .des i{
+font-size: 24px;
+}
 
   #icons.active{
   right:0;
@@ -880,18 +892,7 @@ color: #fff;
 
 }
 
-#product1 .pro .des h4{
-  font-size: 17px;
-}
-#product1 .pro{     
-  margin: 17x;
-  width: 40px;
-    height: 250px;
-  
-}
-#product1 .pro .des i{
-font-size: 24px;
-}
+
 
 footer .copyright{
   text-align: start;
@@ -1040,6 +1041,7 @@ var loves = document.querySelectorAll("#love");
 
 loves.forEach(function(love) {
   love.onclick = function() {
+   
     love.style.color = love.style.color === "red" ? "black" : "red";
   };
 });
