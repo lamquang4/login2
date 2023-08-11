@@ -504,6 +504,9 @@ max-width:100%;
           #icons.active{
           right:0;
          } 
+         .active{
+          width:280px;
+         }
          #mobile{
           
           display: flex;
@@ -635,7 +638,7 @@ max-width:100%;
                 right:-300px;
                 height:100vh;
              
-                background-color: #E3E6F3;
+                background-color: white;
                 box-shadow: 0 40px 60px rgba(0,0,0,0.1);
         padding:80px 0 0 10px;
         transition: 0.3s ease;
@@ -651,11 +654,17 @@ max-width:100%;
               #icons .group{
          
                 margin-bottom: 25px; 
-                background-color: #E3E6F3;
+                background-color: white;
               }
               #icons.active{
               right:0px;
              } 
+             .active{
+    z-index:100;
+
+    overflow: hidden;
+   
+  }
               #mobile{
            
             display: flex;
@@ -715,7 +724,7 @@ max-width:100%;
               background-size: contain;
               background-repeat: no-repeat;
             display: flex;
-         
+        
             }
        
         
