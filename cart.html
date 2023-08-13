@@ -35,7 +35,7 @@
 </div>
 <div id="mobile"> 
 
-  <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+  <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
  <a href=""><i id="heart"  class="fa-regular fa-heart"></i></a>
 <a href="login.html"><i  class="fa-regular fa-user" id="account"></i></a>
 
@@ -44,7 +44,88 @@
 </div>
  </section>
 
+ <section id="carts" class="section-f1">
+  <table width="100%">
+    <thead>
+  <tr>
+    <td>Remove</td>
+    <td>Image</td>
+    <td>Product</td>
+    <td>Price</td>
+    <td>Quantity</td>
+    <td>Subtotal</td>
+  </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+         <a href=""><i  id="delete" class="fa-solid fa-trash-can"></i></a> 
+     
+        </td>
+        <td><img src="ao/shirt1.webp"> </td>
+        <td>Shirt</td>
+        <td>$120.00</td>
+        <td><input type="number" value="1"></td>
+        <td>$120.00</td>
+      </tr>
+      <tr>
+        <td>
+         <a href=""><i  id="delete" class="fa-solid fa-trash-can"></i></a> 
+     
+        </td>
+        <td><img src="ao/shirt2.webp"> </td>
+        <td>Shirt</td>
+        <td>$120.00</td>
+        <td><input type="number" value="1"></td>
+        <td>$120.00</td>
+      </tr>
+      <tr>
+        <td>
+         <a href=""><i  id="delete" class="fa-solid fa-trash-can"></i></a> 
+     
+        </td>
+        <td><img src="ao/shirt4.webp"> </td>
+        <td>Shirt</td>
+        <td>$120.00</td>
+        <td><input type="number" value="1"></td>
+        <td>$120.00</td>
+      </tr>
+    </tbody>
+  </table>
+  
+   </section>
+  
+   <section id="cart-add" class="section-p1">
+<div id="coupon">
+<h3>
+  Apply Coupon
+</h3>
+<div> 
+  <input type="text" placeholder="Enter Your Coupon">
+  <button class="normal">Apply</button>
+</div>
+</div>
 
+<div id="subtotal">
+<h3>Cart Totals</h3>
+<table>
+  <tr>
+    <td id="inform">Cart Subtotal</td>
+    <td id="totals">$$360.00</td>
+  </tr>
+  <tr>
+    <td id="inform">Shipping</td>
+    <td id="totals">Free</td>
+  </tr>
+  <tr>
+    <td id="inform"><strong>Total</strong></td>
+    <td id="totals"><strong>$360.00</strong></td>
+  </tr>
+</table>
+<button class="normal">Procced to checkout</button>
+</div>
+   </section>
+  
 
 
 <footer class="section-f1">
@@ -701,6 +782,18 @@
     footer .col{
       margin-right: 18px;
     }
+#cart-add{
+flex-direction: column;
+}
+#coupon{
+  width: 100%;
+margin-left: 142.8px;
+}
+#subtotal{
+  width: 100%;
+  padding: 20px;
+  margin-left: 104px;
+}
     }
     
     @media(max-width:768px){
@@ -792,6 +885,134 @@
         }
     }
     
+#carts table{
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  white-space: nowrap;
+}
+#carts i{
+  font-size: 20px;
+  color:rgb(231, 18, 18);
+}
+#carts table img{
+  width: 70px;
+}
+#carts table td:nth-child(1){
+  width:100px;
+  text-align: center;
+
+}
+#carts table td:nth-child(2){
+  width:150px;
+  text-align: center;
+
+}
+#carts table td:nth-child(3){
+  width:250px;
+  text-align: center;
+
+}
+#carts table td:nth-child(4),
+#carts table td:nth-child(5),
+#carts table td:nth-child(6){
+
+
+  width:150px;
+  text-align: center;
+
+}
+#carts table td:nth-child(5) input{
+  width:55px;
+padding:10px 5px 10px 15px;
+
+}
+#carts table thead{
+  border:  1px solid #e2e9e1;
+  border-left: none;
+  border-right: none;
+}
+#carts table thead td{
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 18px 0;
+
+}
+#carts table tbody tr td{
+  padding-top: 15px;
+}
+#carts table tbody td{
+  font-size: 15px;
+}
+#carts{
+  margin-top: 30px;
+  margin-bottom: 22px;
+  overflow-x: auto;
+}
+
+#cart-add{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+ #coupon{
+  width: 50%;
+  margin-bottom: 30px;
+ }
+#coupon h3,
+#subtotal h3{
+  padding-bottom: 15px;
+}
+#coupon input{
+  padding: 10px 20px;
+  outline:none;
+  width: 60%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  border:1px solid #e2e9e1;
+}
+#coupon button
+{
+  background-color: #088178;
+  color:#fff;
+height:35px;
+  width: 72px;
+
+}
+#subtotal button{
+  background-color: #088178;
+  color:#fff;
+  height:48px;
+  font-size: 14px;
+  width: 142px;
+}
+#subtotal{
+  width: 50%;
+  margin-bottom: 30px;
+  border: 1px solid #e2e9e1;
+  padding:30px;
+}
+#subtotal table{
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+ #subtotal table   td{
+  width: 10px;
+  font-size: 14px;
+  border: 1px solid #e2e9e1;
+padding: 10px;
+}
+
+#subtotal #inform{
+  width: 40%;
+}
+#subtotal  #totals{
+  width: 60%;
+}
+
      </style>
     
 
@@ -806,6 +1027,6 @@
       if(close){
       close.addEventListener('click',() =>{
     nav.classList.remove('active');
-      })
-    }
+      }) }  
+
 </script>    
