@@ -48,7 +48,7 @@
  <div class="container" id="container">
   <div class="f-box">
        <h1 id="tittle">Sign Up</h1>
-       <form  action="" onsubmit="register()">
+       <form  action="">
           <div class="input-group">
         <div class="input-field">
           <i class="fa-solid fa-user"></i>
@@ -57,8 +57,11 @@
   
         <div class="input-field">
           <i class="fa-solid fa-lock"></i>
-          <input type="password" placeholder="Password" id="password">
+          <input type="password" placeholder="Password" id="password"> 
+            <div id="eye"> 
+              <i class="fa-solid fa-eye-slash"></i> </div>
         </div>
+     
   
         <div class="input-field" id="giau">
           <i class="fa-solid fa-lock" id="ic"></i>
@@ -119,8 +122,19 @@
 
  </body>
  </html>
- 
+ <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script>
+  $(document).ready(function(){
+    $('#eye').click(function(){
+        $(this).toggleClass('open');
+        $(this).children('i').toggleClass('fa-eye-slash fa-eye');
+        if($(this).hasClass('open')){
+            $(this).prev().attr('type', 'text');
+        }else{
+            $(this).prev().attr('type', 'password');
+        }
+    });
+});
   let giau=document.getElementById("giau");
     let subtn=document.getElementById("subtn");
     let sibtn=document.getElementById("sibtn");
@@ -136,6 +150,7 @@
         hidep.style.borderColor="#0000FF";
         subtn.classList.add("disable");
         sibtn.classList.remove("disable");
+        document.getElementById("eye").style.display="block";
     }
     subtn.onclick= function(){
         hidep.style.display="block";
@@ -145,6 +160,7 @@
         tittle.innerHTML="Sign Up";
         subtn.classList.remove("disable");
         sibtn.classList.add("disable");
+        document.getElementById("eye").style.display="none";
     }
 
 
@@ -163,6 +179,7 @@ nav.classList.remove('active');
 
   })
 }
+
     </script>
     
     
@@ -265,6 +282,11 @@ margin-bottom: 18px;
 .input-group{
     height: 260px;
 
+}
+#eye{
+  margin-right: 14px;
+  font-size: 17.5px;
+  display: none;
 }
 .b-field button.disable{
     background:#eaeaea;
