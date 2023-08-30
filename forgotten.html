@@ -3,9 +3,9 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <html>
 <head>
-<title>Sign up</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login & Register</title>
 </head>
 <body>
  <section id="header">
@@ -47,34 +47,23 @@
  <section id="section-login">
  <div class="container" id="container">
   <div class="f-box">
-       <h1 id="tittle">Sign Up</h1>
+       <h1 id="tittle">Reset Password</h1>
        <form  action="">
           <div class="input-group">
-        <div class="input-field">
-          <i class="fa-solid fa-user"></i>
-          <input  type="text" placeholder="Username" id="username">
-        </div>
+        
   
-        <div class="input-field">
-          <i class="fa-solid fa-lock"></i>
-          <input type="password" placeholder="Password" id="password"> 
-            <div id="eye"> 
-              <i class="fa-solid fa-eye-slash"></i> </div>
-        </div>
+            <div class="input-field">
+                <i class="fa-solid fa-envelope"></i>
+                <input  type="email" placeholder="Enter Your Email" id="email">
+              </div>
      
-  
-        <div class="input-field" id="giau">
-          <i class="fa-solid fa-lock" id="ic"></i>
-          <input id="hidep" type="password" placeholder="Confirm Password" id="cpass">
-        </div>
         <div id="fpass">
-  <a href="" id="forget">Already have an account?</a></div>
+  <a href="login.html" id="forget">Return to sign in</a></div>
           </div>
-          <div class="b-field">
-              <button type="button" onclick="" id="subtn">Sign up</button>
-          <button type="button" onclick="" id="sibtn" class="disable">Sign in</button>
          
-      </div>
+              <button type="button" onclick="" id="submit">Reset</button>
+       
+  
        </form>
   </div>
   </div>
@@ -124,48 +113,6 @@
  </html>
  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script>
-  $(document).ready(function(){
-    $('#eye').click(function(){
-        $(this).toggleClass('open');
-        $(this).children('i').toggleClass('fa-eye-slash fa-eye');
-        if($(this).hasClass('open')){
-            $(this).prev().attr('type', 'text');
-        }else{
-            $(this).prev().attr('type', 'password');
-        }
-    });
-});
-  let giau=document.getElementById("giau");
-    let subtn=document.getElementById("subtn");
-    let sibtn=document.getElementById("sibtn");
-    let hidep=document.getElementById("hidep");
-   let ic=document.getElementById("ic");
-    let tittle=document.getElementById("tittle");
-    sibtn.onclick = function(){
-        hidep.style.display="none";
-        giau.style.borderBlockColor="white";
-        document.getElementById("forget").textContent = "Forgotten your password?";
-        ic.style.display="none";
-        tittle.innerHTML="Sign In";
-        document.title = "Sign In";
-        hidep.style.borderColor="#0000FF";
-        subtn.classList.add("disable");
-        sibtn.classList.remove("disable");
-        document.getElementById("eye").style.display="block";
-        document.getElementById("forget").href = "forgotten.html";
-    }
-    subtn.onclick= function(){
-        hidep.style.display="block";
-        ic.style.display="block";
-        document.getElementById("forget").textContent = "Already have an account?";
-        giau.style.borderBlockColor="#e5e5e5";
-        tittle.innerHTML="Sign Up";
-        document.title = "Sign Up";
-        subtn.classList.remove("disable");
-        sibtn.classList.add("disable");
-        document.getElementById("eye").style.display="none";
-        document.getElementById("forget").href = "login.html";
-    }
 
 
 
@@ -192,13 +139,13 @@ nav.classList.remove('active');
 #section-login {
   background-color: rgba(255, 255, 255, 0.649);
   width:100%;
-  height:550px;
+  height:400px;
 
 }
  #section-login   .container{
   
     width: 98%;
-    height:75vh;
+    height:40vh;
 padding-bottom: 20px;
     display: flex;
   justify-content: center;
@@ -247,7 +194,7 @@ margin-bottom: 18px;
     .input-field i{
         margin-left:11px;
       color: #999;
-    
+    font-size: 20px;
      
     } 
     .input-field {
@@ -264,17 +211,18 @@ margin-bottom: 18px;
     #fpass{
         font-weight: 610;
     }
-.b-field{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-.b-field button{
 
-    flex-basis: 48%;
+.input-group{
+    height: 110px;
+
+}
+#submit {
+     width:44%;
+    height:40px;
+       cursor: pointer; 
+       flex-basis: 50%;
     background: white;
     color: black;
-    height: 40px;
     border-radius: 20px;
     border:1.8px solid black;
     outline:0;
@@ -283,20 +231,8 @@ margin-bottom: 18px;
     cursor: pointer;
     transition: blue1 1s;
 }
-.input-group{
-    height: 260px;
 
-}
-#eye{
-  margin-right: 14px;
-  font-size: 17.5px;
-  display: none;
-}
-.b-field button.disable{
-    background:#eaeaea;
-    color:#3c3737;
-}
- button{
+button{
         transition: all 0.2s ease;
         border: 3px solid black;
   border-radius: 0.4em;
@@ -646,7 +582,7 @@ width: 100%;
   #section-login {
   background-color: rgba(255, 255, 255, 0.649);
   width:100%;
-  height:520px;
+  height:400px;
 
 }
 .f-box {
