@@ -144,6 +144,8 @@
     sibtn.onclick = function(){
         hidep.style.display="none";
         giau.style.borderBlockColor="white";
+      
+        document.getElementById("forget").style.visibility="visible";
         document.getElementById("forget").textContent = "Forgotten your password?";
         ic.style.display="none";
         tittle.innerHTML="Sign In";
@@ -155,16 +157,17 @@
         document.getElementById("forget").href = "forgotten.html";
     }
     subtn.onclick= function(){
+      document.getElementById("forget").style.visibility="hidden";
+
         hidep.style.display="block";
-        ic.style.display="block";
-        document.getElementById("forget").textContent = "Already have an account?";
+        ic.style.display="block"; 
         giau.style.borderBlockColor="#e5e5e5";
         tittle.innerHTML="Sign Up";
         document.title = "Sign Up";
         subtn.classList.remove("disable");
         sibtn.classList.add("disable");
         document.getElementById("eye").style.display="none";
-        document.getElementById("forget").href = "login.html";
+
     }
 
 
@@ -189,6 +192,9 @@ nav.classList.remove('active');
     
     
     <style>
+   #forget{
+visibility: hidden;
+   }
 #section-login {
   background-color: rgba(255, 255, 255, 0.649);
   width:100%;
@@ -257,8 +263,8 @@ margin-bottom: 18px;
         text-decoration: none;
         font-size:13px;
         color: #8d8d8d;
-        display: flex;
-     justify-content: left;
+  display: flex;
+  justify-content: left;
      font-weight: 300;
     }
     #fpass{
@@ -284,7 +290,7 @@ margin-bottom: 18px;
     transition: blue1 1s;
 }
 .input-group{
-    height: 260px;
+    height: 228px;
 
 }
 #eye{
