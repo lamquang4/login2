@@ -116,7 +116,6 @@
 
 
 
-
     const bar = document.getElementById('bar');
 const icon = document.getElementById('icons');
 const close=document.getElementById('close');
@@ -130,7 +129,23 @@ nav.classList.remove('active');
 
   })
 }
-
+const forg=document.getElementById('forget');
+const ab='http://127.0.0.1:5500/login.html';
+forg.onclick=function(){
+  hidep.style.display="none";
+        giau.style.borderBlockColor="white";
+      
+        document.getElementById("forget").style.visibility="visible";
+        document.getElementById("forget").textContent = "Forgotten your password?";
+        ic.style.display="none";
+        tittle.innerHTML="Sign In";
+        document.title = "Sign In";
+        hidep.style.borderColor="#0000FF";
+        subtn.classList.add("disable");
+        sibtn.classList.remove("disable");
+        document.getElementById("eye").style.display="block";
+        document.getElementById("forget").href = "forgotten.html";
+}
     </script>
     
     

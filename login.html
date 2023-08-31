@@ -47,7 +47,7 @@
  <section id="section-login">
  <div class="container" id="container">
   <div class="f-box">
-       <h1 id="tittle">Sign Up</h1>
+       <h1 id="tittle">Sign In</h1>
        <form  action="">
           <div class="input-group">
         <div class="input-field">
@@ -68,11 +68,11 @@
           <input id="hidep" type="password" placeholder="Confirm Password" id="cpass">
         </div>
         <div id="fpass">
-  <a href="" id="forget">Already have an account?</a></div>
+  <a href="forgotten.html" id="forget">Forgotten your password?</a></div>
           </div>
           <div class="b-field">
-              <button type="button" onclick="" id="subtn">Sign up</button>
-          <button type="button" onclick="" id="sibtn" class="disable">Sign in</button>
+              <button type="button" onclick="" id="subtn">Sign in</button>
+          <button type="button" onclick="" id="sibtn" >Sign up</button>
          
       </div>
        </form>
@@ -140,36 +140,31 @@
     let sibtn=document.getElementById("sibtn");
     let hidep=document.getElementById("hidep");
    let ic=document.getElementById("ic");
+  let forg=document.getElementById("forget");
     let tittle=document.getElementById("tittle");
     sibtn.onclick = function(){
-        hidep.style.display="none";
-        giau.style.borderBlockColor="white";
-      
-        document.getElementById("forget").style.visibility="visible";
-        document.getElementById("forget").textContent = "Forgotten your password?";
-        ic.style.display="none";
-        tittle.innerHTML="Sign In";
-        document.title = "Sign In";
-        hidep.style.borderColor="#0000FF";
-        subtn.classList.add("disable");
-        sibtn.classList.remove("disable");
-        document.getElementById("eye").style.display="block";
-        document.getElementById("forget").href = "forgotten.html";
-    }
-    subtn.onclick= function(){
-      document.getElementById("forget").style.visibility="hidden";
-
-        hidep.style.display="block";
-        ic.style.display="block"; 
-        giau.style.borderBlockColor="#e5e5e5";
-        tittle.innerHTML="Sign Up";
+   giau.style.display ="flex";
+   forg.style.visibility="hidden";
+   tittle.innerHTML="Sign Up";
         document.title = "Sign Up";
-        subtn.classList.remove("disable");
-        sibtn.classList.add("disable");
+        subtn.style.backgroundColor="white";
+     sibtn.style.backgroundColor="#eaeaea";
+        giau.style.borderBlockColor="#e5e5e5";
         document.getElementById("eye").style.display="none";
-
+    }
+    
+    subtn.onclick= function(){
+      tittle.innerHTML="Sign In";
+        document.title = "Sign In";
+      giau.style.display ="none";
+      forg.style.visibility="visible"; 
+      hidep.style.borderColor="#0000FF";
+     subtn.style.backgroundColor="#eaeaea";
+     sibtn.style.backgroundColor="white";
+   document.getElementById("eye").style.display="block";
     }
 
+  
 
 
 
@@ -192,9 +187,12 @@ nav.classList.remove('active');
     
     
     <style>
-   #forget{
-visibility: hidden;
-   }
+    
+      #giau{
+        display: none;
+        
+      }
+
 #section-login {
   background-color: rgba(255, 255, 255, 0.649);
   width:100%;
@@ -278,8 +276,8 @@ margin-bottom: 18px;
 .b-field button{
 
     flex-basis: 48%;
-    background: white;
-    color: black;
+  
+   
     height: 40px;
     border-radius: 20px;
     border:1.8px solid black;
@@ -289,6 +287,14 @@ margin-bottom: 18px;
     cursor: pointer;
     transition: blue1 1s;
 }
+#subtn{
+  background: #eaeaea;
+
+}
+#sibtn{
+  background: white;
+  color: black;
+}
 .input-group{
     height: 228px;
 
@@ -296,12 +302,9 @@ margin-bottom: 18px;
 #eye{
   margin-right: 14px;
   font-size: 17.5px;
-  display: none;
+
 }
-.b-field button.disable{
-    background:#eaeaea;
-    color:#3c3737;
-}
+
  button{
         transition: all 0.2s ease;
         border: 3px solid black;
