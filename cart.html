@@ -64,9 +64,9 @@
         </td>
         <td><img src="ao/shirt1.webp"> </td>
         <td>Shirt</td>
-        <td >$<span id="price0">120</span>.00</td>
+        <td >$120.00</td>
         <td><input id="quantity0" type="number" value="1" min="1" max="20"></td>
-        <td >$<span id="price00">120</span>.00</td>
+        <td >$<span id="price0">120</span>.00</td>
       </tr>
       <tr>
         <td>
@@ -75,9 +75,9 @@
         </td>
         <td><img src="ao/shirt2.webp"> </td>
         <td>Shirt</td>
-        <td >$<span id="price1">120</span>.00</td>
+        <td >$120.00</td>
         <td><input  id="quantity1" type="number" value="1" min="1" max="20"></td>
-        <td >$<span id="price11">120</span>.00</td>
+        <td >$<span id="price1">120</span>.00</td>
       </tr>
       <tr>
         <td>
@@ -86,9 +86,9 @@
         </td>
         <td><img src="ao/shirt4.webp"> </td>
         <td>Shirt</td>
-        <td >$<span id="price2">120</span>.00</td>
+        <td >$120.00</td>
         <td><input  id="quantity2" type="number" value="1" min="1" max="20"></td>
-        <td >$<span id="price22">120</span>.00</td>
+        <td >$<span id="price2">120</span>.00</td>
       </tr>
 
      
@@ -1014,36 +1014,27 @@ padding: 10px;
       var quantity0 = document.getElementById("quantity0").value;
    var price = 120; 
       var totalPrice = quantity0 * price;
-document.getElementById("price00").innerHTML =totalPrice;
-      document.getElementById("price0").innerHTML =totalPrice;
-    }
 
+      document.getElementById("price0").innerHTML =totalPrice;
+      } 
     document.getElementById("quantity0").addEventListener("change", calculatePrice);
 
  // số lượng => giá sp 2
     function calculatePrice1() {
       var quantity1 = document.getElementById("quantity1").value;
-   
       var price = 120; 
       var totalPrice = quantity1 * price;
-
-document.getElementById("price11").innerHTML =totalPrice;
       document.getElementById("price1").innerHTML =totalPrice;
     }
-
     document.getElementById("quantity1").addEventListener("change", calculatePrice1);
 
     // số lượng => giá sp 3
     function calculatePrice2() {
       var quantity2 = document.getElementById("quantity2").value;
-  
       var price = 120; 
       var totalPrice = quantity2 * price;
-
-document.getElementById("price22").innerHTML =totalPrice;
       document.getElementById("price2").innerHTML =totalPrice;
     }
-
     document.getElementById("quantity2").addEventListener("change", calculatePrice2);
 
 </script>    
