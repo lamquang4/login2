@@ -96,15 +96,7 @@
    </section>
   
    <section id="cart-add" class="section-p1">
-<div id="coupon">
-<h3>
-  Apply Coupon
-</h3>
-<div> 
-  <input type="text" placeholder="Enter Coupon">
-  <button class="normal">Apply</button>
-</div>
-</div>
+
 
 <div id="subtotal">
 <h3>Cart Totals</h3>
@@ -786,27 +778,15 @@ top:17px;
       margin-right: 18px;
     }
 #cart-add{
-flex-direction: column;
-}
-#coupon{
-  width: 100%;
-margin-left: 110px;
-}
-#subtotal{
-
-  padding: 20px;
-  margin-left: 75px;
-
+ 
+margin-right:150px;
 }
 
-#coupon input{
-  width: 75%;
 
-}
-
-#subtotal h3,
-#coupon h3{
+#subtotal h3
+{
   font-size: 19px;
+  text-wrap: nowrap;
 }
 
 
@@ -973,58 +953,32 @@ padding:10px 5px 10px 15px;
 #cart-add{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
- #coupon{
-  width: 50%;
-  margin-bottom: 30px;
- }
-#coupon h3,
-#subtotal h3{
-  padding-bottom: 15px;
-}
-#coupon input{
-  padding: 10px 20px;
-  outline:none;
-
-  margin-right: 10px;
-  margin-bottom: 10px;
-  border:1px solid #e2e9e1;
-}
-#coupon button
-{
-  background-color: #088178;
-  color:#fff;
-height:35px;
-  width: 72px;
-
-}
-#coupon h3{
-  margin-left:15px;
-}
-
+ 
 #subtotal button{
   background-color: #088178;
   color:#fff;
   height:48px;
   font-size: 14px;
-  width: 142px;
+  width: 148px;
 }
 #subtotal{
-  width: 50%;
+  width: 40%;
   margin-bottom: 30px;
-
+margin-left:50px ;
   padding:30px;
 }
+
 #subtotal table{
   border: 1px solid #e2e9e1;
   border-collapse: collapse;
-  width: 100%;
+  width:70%;
   margin-bottom: 20px;
 }
 
  #subtotal table   td{
-  width: 10px;
+  width: 0px;
   font-size: 14px;
   border: 1px solid #e2e9e1;
 padding: 10px;
