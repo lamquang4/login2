@@ -105,7 +105,7 @@
 <table>
   <tr>
     <td id="inform">Cart Subtotal</td>
-    <td id="totals">$360.00</td>
+    <td id="totals">$<span id="tongcong" >360</span>.00</td>
   </tr>
   <tr>
     <td id="inform">Shipping</td>
@@ -1016,6 +1016,7 @@ padding: 10px;
       var totalPrice = quantity0 * price;
 
       document.getElementById("price0").innerHTML =totalPrice;
+     
       } 
     document.getElementById("quantity0").addEventListener("change", calculatePrice);
 
@@ -1024,7 +1025,9 @@ padding: 10px;
       var quantity1 = document.getElementById("quantity1").value;
       var price = 120; 
       var totalPrice = quantity1 * price;
+ 
       document.getElementById("price1").innerHTML =totalPrice;
+      
     }
     document.getElementById("quantity1").addEventListener("change", calculatePrice1);
 
@@ -1036,5 +1039,13 @@ padding: 10px;
       document.getElementById("price2").innerHTML =totalPrice;
     }
     document.getElementById("quantity2").addEventListener("change", calculatePrice2);
+
+    function caltotal(){
+  var totalsp1=calculatePrice();
+  var totalsp2=calculatePrice1();
+  var totalsp3=calculatePrice2();
+  var total= totalsp1 + totalsp2 +totalsp3;
+  document.querySelector("#tongcong").innerHTML=total;
+}
 
 </script>    
