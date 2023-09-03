@@ -64,7 +64,7 @@
         </td>
         <td><img src="ao/shirt1.webp"> </td>
         <td>Shirt</td>
-        <td >$120.00</td>
+        <td >$<span id="pricesp1">120</span>.00</td>
         <td><input id="quantity0" type="number" value="1" min="1" max="20"></td>
         <td >$<span id="price0">120</span>.00</td>
       </tr>
@@ -75,7 +75,7 @@
         </td>
         <td><img src="ao/shirt2.webp"> </td>
         <td>Shirt</td>
-        <td >$120.00</td>
+        <td >$<span id="pricesp2">120</span>.00</td>
         <td><input  id="quantity1" type="number" value="1" min="1" max="20"></td>
         <td >$<span id="price1">120</span>.00</td>
       </tr>
@@ -86,7 +86,7 @@
         </td>
         <td><img src="ao/shirt4.webp"> </td>
         <td>Shirt</td>
-        <td >$120.00</td>
+        <td >$<span id="pricesp3">120</span>.00</td>
         <td><input  id="quantity2" type="number" value="1" min="1" max="20"></td>
         <td >$<span id="price2">120</span>.00</td>
       </tr>
@@ -105,15 +105,15 @@
 <table>
   <tr>
     <td id="inform">Cart Subtotal</td>
-    <td id="totals">$<span id="tongcong" >360</span>.00</td>
+    <td id="totals">$<span id="tongcong" ></span>.00</td>
   </tr>
   <tr>
     <td id="inform">Shipping</td>
-    <td id="totals">Free</td>
+    <td ><span id="priceship">Free</span></td>
   </tr>
   <tr>
     <td id="inform"><strong>Total</strong></td>
-    <td id="totals"><strong>$360.00</strong></td>
+    <td id="totals"><strong>$<strong id="all"></strong>.00</strong></td>
   </tr>
 </table>
 <button class="normal">Procced to checkout</button>
@@ -1012,7 +1012,7 @@ padding: 10px;
 // số lượng => giá sp 1
       function calculatePrice() {
       var quantity0 = document.getElementById("quantity0").value;
-   var price = 120; 
+   var price = document.getElementById("pricesp1").innerHTML; 
       var totalPrice = quantity0 * price;
 
       document.getElementById("price0").innerHTML =totalPrice;
@@ -1023,7 +1023,7 @@ padding: 10px;
  // số lượng => giá sp 2
     function calculatePrice1() {
       var quantity1 = document.getElementById("quantity1").value;
-      var price = 120; 
+      var price = document.getElementById("pricesp2").innerHTML; 
       var totalPrice = quantity1 * price;
  
       document.getElementById("price1").innerHTML =totalPrice;
@@ -1034,18 +1034,38 @@ padding: 10px;
     // số lượng => giá sp 3
     function calculatePrice2() {
       var quantity2 = document.getElementById("quantity2").value;
-      var price = 120; 
+      var price = document.getElementById("pricesp3").innerHTML; 
       var totalPrice = quantity2 * price;
       document.getElementById("price2").innerHTML =totalPrice;
     }
     document.getElementById("quantity2").addEventListener("change", calculatePrice2);
 
-    function caltotal(){
-  var totalsp1=calculatePrice();
-  var totalsp2=calculatePrice1();
-  var totalsp3=calculatePrice2();
-  var total= totalsp1 + totalsp2 +totalsp3;
-  document.querySelector("#tongcong").innerHTML=total;
-}
+    function calculateTotalAll() {
+       var shipper=  document.getElementById("priceship").innerHTML;
+       var shipperNumber = parseInt(shipper); 
+      document.getElementById("all").innerHTML= totalPrice0 + totalPrice1 + totalPrice2 + shipperNumber;
+         if (document.getElementById("priceship").innerHTML === "Free") {
+    shipperNumber = 0;
+  }
+      var quantity0 = document.getElementById("quantity0").value;
+      var quantity1 = document.getElementById("quantity1").value;
+      var quantity2 = document.getElementById("quantity2").value;
+      var price0 = document.getElementById("pricesp1").innerHTML;
+      var price1 = document.getElementById("pricesp2").innerHTML;
+      var price2 = document.getElementById("pricesp3").innerHTML;
+      var totalPrice0 = quantity0 * price0;
+      var totalPrice1 = quantity1 * price1;
+      var totalPrice2 = quantity2 * price2;
+      var totalPrice = totalPrice0 + totalPrice1 + totalPrice2; 
+      var totalAll= totalPrice0 + totalPrice1 + totalPrice2 + shipperNumber;
+      document.getElementById("tongcong").innerHTML = totalPrice;
+ document.getElementById("all").innerHTML = totalAll;
+      return totalPrice;
+      return totalAll;
+    }
+    document.getElementById("quantity0").addEventListener("change", calculateTotalAll);
+    document.getElementById("quantity1").addEventListener("change", calculateTotalAll);
+    document.getElementById("quantity2").addEventListener("change", calculateTotalAll);
 
+     
 </script>    
