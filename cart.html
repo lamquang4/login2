@@ -65,7 +65,7 @@
         <td><img src="ao/shirt1.webp"> </td>
         <td>Shirt</td>
         <td >$<span id="pricesp1">120</span>.00</td>
-        <td><input id="quantity0" type="number" value="1" min="1" max="20"></td>
+        <td><input id="quantity0" type="number" value="1" min="1" max="99"></td>
         <td >$<span id="price0">120</span>.00</td>
       </tr>
       <tr>
@@ -76,7 +76,7 @@
         <td><img src="ao/shirt2.webp"> </td>
         <td>Shirt</td>
         <td >$<span id="pricesp2">100</span>.00</td>
-        <td><input  id="quantity1" type="number" value="1" min="1" max="20"></td>
+        <td><input  id="quantity1" type="number" value="1" min="1" max="99"></td>
         <td >$<span id="price1">100</span>.00</td>
       </tr>
       <tr>
@@ -979,17 +979,15 @@ margin-left:50px ;
   border-collapse: collapse;
   width:70%;
   margin-bottom: 20px;
-text-overflow: hidden;
+
 }
 
- #subtotal table   td{
+ #subtotal table td{
 text-align: center;
 width:0;
   font-size: 14px;
   border: 1px solid #e2e9e1;
 padding: 10px;
-
-  
 
 }
 
@@ -1043,5 +1041,6 @@ padding: 10px;
     document.getElementById("quantity0").addEventListener("change", calculateTotalAll);
     document.getElementById("quantity1").addEventListener("change", calculateTotalAll);
     document.getElementById("quantity2").addEventListener("change", calculateTotalAll);
+    
     
 </script>    
