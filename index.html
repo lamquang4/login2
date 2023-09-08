@@ -44,8 +44,8 @@
  </section>
  <section id="hero">
 
-  <h4>Super value deals</h4>
-  <h2>On all products</h2>
+  <h4>SUPER VALUE DEALS</h4>
+  <h2>ON ALL PRODUCTS</h2>
 
 <p>Save more with coupons & up to 70% off!</p>
 <button class="shopbtn">Shop Now
@@ -305,7 +305,7 @@
 <button class="learn2">Learn More</button>
 
 </div>
-<div class="banner-box">
+<div class="banner-box" id="box4">
   <h4>Crazy deals</h4>
   <h2>buy 1 get 1 free</h2>
   <span>The best classic shoes is on sale</span>
@@ -472,11 +472,11 @@ display: flex;
 }
 
 #hero{
-background-image: url('./pic/hero4.png');
-height: 90vh;
+background-image: url('./pic/b7.png');
+height: 92vh;
 width:100%;
 background-size: cover;
-background-position: top 25% right 0;
+background-position: top 20% right 0;
 padding: 0 80px;
     display: flex;
     align-items: flex-start;
@@ -485,24 +485,30 @@ padding: 0 80px;
       }
 #hero h4{
   padding-bottom: 12px;
-  font-size: 55px;
+  font-size: 45px;
+  padding-left: 30px;
+ font-weight: 900;
+
 }
 #hero h2{
   padding-bottom: 12px;
-  font-size: 52px;
+  font-size: 42px;
+  padding-left: 30px;
+  font-weight: 900;
 }
 #hero p{
-  font-size: 20px;
+  font-size: 18px;
+
+  position: relative;
+left: 84px;
 }
-#hero button{
-cursor: pointer;
-}
+
 .shopbtn {
   position: relative;
   display: flex;
   align-items: center;
 margin-top: 27px;
-margin-left: 103px;
+margin-left: 188px;
   width: 125px;
   height: 50px;
   border: none;
@@ -686,23 +692,38 @@ padding: 30px;
   background-image: url('./pic/b4.png');
 
 }
-#sm-banner h4{
-  color: #fff;
-  font-size: 22px;
-  font-weight: 300;
+#sm-banner .banner-box:nth-child(3){
+ 
+ background-image: url('./pic/b5.png');
+
+}
+#sm-banner .banner-box:nth-child(4){
+ 
+ background-image: url('./pic/kid.png');
 
 
 }
-#sm-banner h2{
-  color: #fff;
-  font-size: 30px;
-  font-weight: 800;
 
+#sm-banner h4{
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 900;
+
+
+}
+
+#sm-banner h2{
+  
+  color: #fff;
+  font-size: 25px;
+  font-weight: 800;
+padding-bottom: 8px;
 
 }
 #sm-banner span{
   color: #fff;
-  font-size: 14px;
+  font-size: 17px;
   font-weight: 500;
   padding-bottom: 15px;
 
@@ -894,27 +915,25 @@ display: none;
 #lg-user{
   display: none;
 }
-#hero{
-  height: 70vh;
-  padding:0 80px;
-  background-position: top 30% right 30%;
-  
-}
+
 #hero h4{
   font-size:30px;
+  color: #2bb027;
 
 }
 #hero h2{
-  font-size:32px;
+  font-size:30px;
 color:#2bb027;
 }
 #hero p{
-  font-size: 17px;
+  font-size: 18px;
   color:#13c2b6;
-
+position: relative;
+left: 10px;
 }
 #hero button{
-  margin-left: 25px;
+position: relative;
+right:120px;
 }
 #product1 .pro{
 
@@ -1005,6 +1024,15 @@ padding: 0;
   height: 30vh;
 
 
+}
+#sm-banner h4{
+  font-size: 21px;
+}
+#sm-banner h2{
+  font-size:18px;
+}
+#sm-banner span{
+  font-size: 16px;
 }
 footer .copyright{
   text-align: start;
@@ -1108,8 +1136,8 @@ transition: 0.3s ease;
     }
     #hero{
       height: 70vh;
-      padding:0 80px;
-      background-position: top 30% right 30%;
+      padding:0 70px;
+      background-position: top 30% right 16%;
     }
     #product1 .pro-container{
       justify-content: center;
