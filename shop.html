@@ -26,6 +26,7 @@
 </div> 
     <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
     </li>
+    <span id="countlove">0</span>
     <li id="lg-heart"><a href=""><i id="heart"  class="fa-regular fa-heart"></i></a>
     </li>
     <li id="lg-user"><a href="login.html"><i  class="fa-regular fa-user" id="account"></i></a>
@@ -34,10 +35,12 @@
  </ul>
 </div>
 <div id="mobile"> 
-
   <a href="cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
- <a href=""><i id="heart"  class="fa-regular fa-heart"></i></a>
-<a href="login.html"><i  class="fa-regular fa-user" id="account"></i></a>
+  <div>
+  <span id="countlove1">0</span>
+  <a href=""><i id="heart"  class="fa-regular fa-heart"></i></a>
+</div>
+  <a href="login.html"><i  class="fa-regular fa-user" id="account"></i></a>
 
 <i id="bar" class="fa-solid fa-bars" style="color: #000000;"></i>
 
@@ -437,7 +440,41 @@ background-color: white;
 padding-bottom: 35px;
 box-shadow: 0 5px 15px rgba(0,0,0,0.06);
   }
+   #countlove1 {
+  visibility: hidden;
+    color:white;
+  border-radius: 50%;
+  width:22px;
+  height:22px;
+  background-color: #0071ae;
+  opacity: .9;
+  position: absolute;
+top: 26.5px;
+    left: 73%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  font-size: 14px;
 
+
+}
+#countlove {
+ position: absolute;
+ right: 9.3%;
+ top:3.4%;
+visibility: hidden;
+ color:white;
+border-radius: 50%;
+width:22px;
+height:22px;
+background-color: #0071ae;
+opacity: .9;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+font-size: 14px;
+
+}
   #icons{
      
     display: flex;
@@ -962,6 +999,11 @@ footer h4{
 footer .col{
   margin-right: 18px;
 }
+#countlove1 {
+    position: absolute;
+
+    transform:translate(-184%, -46%);
+  }
 }
 @media (max-width:390px){
 
@@ -972,6 +1014,11 @@ footer .col{
   width: 55px;
   top: 17px;
 }
+#countlove1{
+  position: absolute;
+  transform: translate(-238%, -46%);
+}
+
 }
 @media(max-width:768px){
   
@@ -1032,6 +1079,7 @@ transition: 0.3s ease;
     left:15px;
     
   }
+
   #lg-bag{
     display: none;
   }
@@ -1084,11 +1132,41 @@ nav.classList.remove('active');
 }
 
 var loves = document.querySelectorAll("#love");
-
+var luv=document.getElementById("love");
 loves.forEach(function(love) {
   love.onclick = function() {
    
     love.style.color = love.style.color === "red" ? "black" : "red";
   };
 });
+var counter=document.getElementById("countlove");
+let count=0;
+loves.forEach((love) => {
+  love.addEventListener("click", () => {
+    toggle(love);
+  });
+});
+
+function toggle(love) {
+  const isIncrement = love.classList.contains("is-increment");
+
+  if (isIncrement) {
+    love.classList.remove("is-increment");
+    count--;
+  } else {
+    love.classList.add("is-increment");
+    count++;
+  }
+
+  document.getElementById("countlove").textContent = count;
+  document.getElementById("countlove1").textContent = count;
+if (count === 0) {
+  document.getElementById("countlove1").style.visibility = "hidden";
+    document.getElementById("countlove").style.visibility = "hidden";
+  } else {
+    document.getElementById("countlove").style.visibility = "visible";
+    document.getElementById("countlove1").style.visibility = "visible";
+  }
+}
+
  </script>
