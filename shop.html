@@ -441,6 +441,7 @@ padding-bottom: 35px;
 box-shadow: 0 5px 15px rgba(0,0,0,0.06);
   }
    #countlove1 {
+ 
   visibility: hidden;
     color:white;
   border-radius: 50%;
@@ -459,6 +460,7 @@ top: 26.5px;
 
 }
 #countlove {
+ 
  position: absolute;
  right: 9.3%;
  top:3.4%;
@@ -1168,5 +1170,7 @@ if (count === 0) {
     document.getElementById("countlove1").style.visibility = "visible";
   }
 }
-
+document.getElementById('bar').onclick=function(){
+document.getElementById('countlove').style.display="none";
+}
  </script>
