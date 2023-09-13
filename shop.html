@@ -438,17 +438,28 @@
  </body>
  </html>
  <style>
-.pro #img2{
+
+  
+.pro-container .pro #img2{
   position: absolute;
 
-opacity: 0;
-transition: all 0.6s ease;
+animation:sw 3s infinite;
 
 }
-.pro #img2:hover{
-  opacity: 1;
-}  
 
+
+@keyframes sw{
+  0%{
+opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    opacity: 0;
+  }
+}
+ 
 
   #hot h4{
     margin-top: 22px;
@@ -477,30 +488,46 @@ background-position: center;
 background-size: cover;
 }
 #b-banner .b-box:nth-child(1){
- 
-
-display: flex;
+animation: change 2.5s infinite;
 margin-left: 7.8%;
+background-image: url('./pic/weekend.png');
+animation-play-state: running;
+}
+@keyframes change{
+  0%{
+background-image: url('./pic/weekend1.png');
+  }
+50%{
   background-image: url('./pic/weekend.png');
+}
+  100%{
+    background-image: url('./pic/weekend1.png');
+  }
 }
 #b-banner .b-box:nth-child(2){
 
   background-image: url('./pic/commercial2.png');
 }
 #b-banner .b-box:nth-child(3){
-
+  
+  animation: change1 3s infinite;
+animation-play-state: running;
   margin-right: 7.8%;
- 
-  background-image: url('./pic/b6.png');
-}
-#b-banner .b-box:nth-child(3):hover{
-
   background-image: url('./pic/messi.png');
 }
-#b-banner .b-box:nth-child(1):hover{
-  transition: all 0.7s ease;
-  background-image: url('./pic/weekend1.png');
+
+@keyframes change1{
+  0%{
+    background-image: url('./pic/b6.png');
+  }
+  50%{
+    background-image: url('./pic/messi.png');
+  }
+  100%{
+    background-image: url('./pic/b6.png');
+  }
 }
+
 * {
 
 margin: 0;
