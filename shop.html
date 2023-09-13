@@ -83,7 +83,7 @@
  
   <div class="pro">
     <a href="product.html">
-      <img src="ao/shirt1.webp" alt="" id="img2">
+      
 <img  src="ao/shirt2.webp" id="img1" alt="">
 
 </a>
@@ -440,25 +440,9 @@
  <style>
 
   
-.pro-container .pro #img2{
-  position: absolute;
-
-animation:sw 3s infinite;
-
-}
 
 
-@keyframes sw{
-  0%{
-opacity: 0;
-  }
-  50%{
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
-}
+
  
 
   #hot h4{
@@ -1341,5 +1325,19 @@ document.getElementById("countlove").style.visibility="hidden";
 }
 
 
+const images = ["ao/shirt3.jpg", "ao/shirt4.webp", "ao/shirt1.webp", "ao/shirt2.webp"];
+let currentImage = 0;
 
+function changeImage() {
+  // Lấy hình ảnh tiếp theo
+  currentImage = (currentImage + 1) % images.length;
+
+  // Thay đổi đường dẫn đến hình ảnh
+  const img = document.getElementById("img1");
+  img.src = images[currentImage];
+
+
+}
+
+setInterval(changeImage, 2500);
  </script>
